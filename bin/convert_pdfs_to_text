@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILES=`find . -name '*.pdf'`
+for PDF_FILE in $FILES
+do
+  TEXT_FILE=`echo -n $PDF_FILE | cut -d'/' -f2 | cut -d'.' -f1`.txt
+  pdftotext -layout -nopgbrk -enc UTF-8 $PDF_FILE $TEXT_FILE
+done
+

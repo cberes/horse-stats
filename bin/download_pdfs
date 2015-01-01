@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LISTING=pdf_listing.html
+curl $1/live-racing/racing-info/usta-race-results/ > $LISTING
+FILES=`grep -oiP 'href="\K.+?Results.*?.pdf(?=")' $LISTING`
+wget $FILES
+

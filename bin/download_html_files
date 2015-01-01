@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+ARGS="${@:1}"
+wget --html-extension `python3 $DIR/print_results_urls.py $ARGS`
+

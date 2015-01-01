@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BASE=$1
+y=$2
+m=$3
+for d in ${@:4}
+do
+  wget $BASE/files/results/${m}${d}${y}.htm
+done
+

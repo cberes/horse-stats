@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILES=`find . -name '*.pdf'`
+for PDF_FILE in $FILES
+do
+  HTML_FILE=`echo -n $PDF_FILE | cut -d'/' -f2 | cut -d'.' -f1`.html
+  pdftohtml -noframes -i -s -hidden -nomerge -enc UTF-8 $PDF_FILE $HTML_FILE
+done
+
