@@ -1,7 +1,7 @@
 Horse-racing stats
 ==================
 
-This project scrapes horse-racing stats from a few different websites. It imports these stats into a SQLite database. I've removed the references to those websites to prevent abuse. You would need to provide them as command-line arguments, or edit the scripts.
+This project scrapes horse-racing stats from a few different websites. It imports these stats into a SQLite database.
 
 The scripts in the bin directory can be used to download stat files and convert them to a format understood by the Python code. I've removed the references to any websites to prevent abuse. You would need to provide the base URLs as command-line arguments, or edit the scripts.
 
